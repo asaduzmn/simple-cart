@@ -221,14 +221,14 @@ h1 {
 }
 
 /* promo code */
-.promo-code {
+.promo-code{
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.promo-code input {
+.promo-code input{
     width: 70%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -236,7 +236,7 @@ h1 {
     font-size: 14px;
 }
 
-.promo-code button {
+.promo-code button{
     background-color: #007bff;
     color: white;
     border: none;
@@ -247,11 +247,11 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.promo-code button:hover {
+.promo-code button:hover{
     background-color: #0056b3;
 }
 
-.discounted-total {
+.discounted-total{
     font-weight: bold;
     text-align: right;
     font-size: 18px;
