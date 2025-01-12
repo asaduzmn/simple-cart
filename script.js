@@ -7,6 +7,11 @@ async function fetchProducts() {
     displayProducts();
 }
 
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    updateCart(); // Update cart on page load
+});
+
 function displayProducts() {
     const productList = document.getElementById('product-list');
     productList.innerHTML = '';
