@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Shopping Cart</h1>
+
+    <div class="product-list" id="product-list">
+        <!-- Products will be injected here by JavaScript -->
+    </div>
+
+    <button class="cart-icon" onclick="toggleCartModal()">
+        <div class="cart-container">
+            <img class="cart" src="./img/svg/cart-icon.svg" alt="cart-icon">
+            <span id="cart-count">0</span>
+        </div>
+    </button>
+
+    <div class="overlay" id="overlay" onclick="toggleCartModal()"></div>
+
+    <div class="cart-modal" id="cart-modal">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </ul>
+        <p class="cart-total" id="cart-total">Total: Tk. 0</p>
+        <div class="cart-actions">
+            <button onclick="clearCart()">Clear Cart</button>
+            <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+        </div>
+        
+    </div>
+
+
+    
+
+    <script src="script.js">
+        
+    </script>
+
+</body>
+</html>

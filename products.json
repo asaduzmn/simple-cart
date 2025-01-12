@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Bluetooth Headphones",
+        "description": "Over-ear, noise-cancelling headphones with 20-hour battery life.",
+        "price": 5099.00,
+        "image": "https://images.pexels.com/photos/7241360/pexels-photo-7241360.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 2,
+        "name": "Smart Fitness Tracker",
+        "description": "Water-resistant fitness tracker with heart rate monitor and sleep tracking.",
+        "price": 3399.00,
+        "image": "https://images.pexels.com/photos/4672162/pexels-photo-4672162.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 3,
+        "name": "Laptop Stand",
+        "description": "Adjustable aluminum laptop stand for better ergonomics.",
+        "price": 2199.00,
+        "image": "https://images.pexels.com/photos/26891720/pexels-photo-26891720/free-photo-of-home-office-studio-equipment.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 4,
+        "name": "Portable Charger",
+        "description": "10000mAh power bank with fast charging capabilities.",
+        "price": 1799.00,
+        "image": "https://images.pexels.com/photos/29407254/pexels-photo-29407254/free-photo-of-white-67w-charger-and-cable-on-yellow-background.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 5,
+        "name": "Reusable Water Bottle",
+        "description": "BPA-free, stainless steel water bottle with 1-liter capacity.",
+        "price": 1399.00,
+        "image": "https://images.pexels.com/photos/18381807/pexels-photo-18381807/free-photo-of-a-transparent-reusable-water-bottle.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 6,
+        "name": "Wireless Mouse",
+        "description": "Ergonomic wireless mouse with customizable buttons.",
+        "price": 1099.00,
+        "image": "https://images.pexels.com/photos/7643945/pexels-photo-7643945.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 7,
+        "name": "LED Desk Lamp",
+        "description": "Dimmable LED desk lamp with USB charging port.",
+        "price": 2499.00,
+        "image": "https://images.pexels.com/photos/15519510/pexels-photo-15519510/free-photo-of-lamp-light-in-darkness.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 8,
+        "name": "Noise-Cancelling Earbuds",
+        "description": "In-ear earbuds with active noise-cancelling technology.",
+        "price": 4299.00,
+        "image": "https://images.pexels.com/photos/6889216/pexels-photo-6889216.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 9,
+        "name": "Smart Home Assistant",
+        "description": "Voice-controlled smart home assistant with smart speaker.",
+        "price": 7799.00,
+        "image": "https://images.pexels.com/photos/24346971/pexels-photo-24346971/free-photo-of-home-monitoring-security.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "id": 10,
+        "name": "Electric Kettle",
+        "description": "1.7-liter electric kettle with auto-shutoff and boil-dry protection.",
+        "price": 1999.00,
+        "image": "https://images.pexels.com/photos/1921673/pexels-photo-1921673.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
+]
