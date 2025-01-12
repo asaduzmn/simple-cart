@@ -29,6 +29,11 @@
             <!-- Cart items will be displayed here -->
         </ul>
         <p class="cart-total" id="cart-total">Total: Tk. 0</p>
+        <div class="promo-code">
+            <input type="text" id="promo-code-input" placeholder="Enter promo code">
+            <button onclick="applyPromoCode()">Apply</button>
+        </div>
+        <p class="discounted-total" id="discounted-total"></p>
         <div class="cart-actions">
             <button onclick="clearCart()">Clear Cart</button>
             <button class="place-order-btn" onclick="placeOrder()">Place Order</button>

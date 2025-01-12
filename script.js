@@ -1,5 +1,6 @@
 let products = [];
 const cart = [];
+let discount = 0;
 
 async function fetchProducts() {
     const response = await fetch('products.json');
@@ -44,6 +45,7 @@ function updateCart() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
     const cartCount = document.getElementById('cart-count');
+    const discountedTotal = document.getElementById('discounted-total');
     cartItems.innerHTML = '';
     let total = 0;
     let itemCount = 0;
@@ -60,6 +62,24 @@ function updateCart() {
     });
     cartTotal.textContent = `Total: Tk. ${total.toFixed(2)}`;
     cartCount.textContent = itemCount;
+
+    if(total > 0){
+        // count discount
+        const discountedAmount = total * discount;
+        const finalTotal = total - discountedAmount;
+        // discountedTotal.textContent = discount > 0 ? `Discounted Total: Tk. ${finalTotal.toFixed(2)}` : '';
+        if (discount > 0) {
+            discountedTotal.innerHTML = `
+                <p>Discount: Tk. ${discountedAmount.toFixed(2)}</p>
+                <p>Final Total: Tk. ${finalTotal.toFixed(2)}</p>
+            `;
+        } else {
+            discountedTotal.innerHTML = '';
+        }
+    }else{
+        discountedTotal.innerHTML = '';
+    }
+
 
     const placeOrderBtn = document.querySelector('.place-order-btn');
     if (cart.length > 0) {
@@ -83,11 +103,15 @@ function removeFromCart(productId) {
     if (itemIndex !== -1) {
         cart.splice(itemIndex, 1);
     }
+    if(cart.length === 0){
+        discount = 0;
+    }
     updateCart();
 }
 
 function clearCart() {
     cart.length = 0;
+    discount = 0;
     updateCart();
 }
 
@@ -100,11 +124,38 @@ function toggleCartModal() {
 }
 
 
+//discount
+function applyPromoCode() {
+    if (cart.length === 0) {
+        alert('Cart is empty');
+        document.getElementById('promo-code-input').value = '';
+        return;
+    }
+
+    const promoCodeInput = document.getElementById('promo-code-input').value;
+    if (promoCodeInput === 'ostad10') {
+        discount = 0.10;
+    } else if (promoCodeInput === 'ostad5') {
+        discount = 0.05;
+    } else {
+        discount = 0;
+        alert('Invalid promo code');
+    }
+    // Clear the input field 
+    document.getElementById('promo-code-input').value = '';
+    updateCart();
+}
+
+
 //oder place
 function placeOrder() {
+    const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const discountedAmount = total * discount;
+    const finalTotal = total - discountedAmount;
+
     const order = {
         items: cart.map(item => ({ product: item.name, quantity: item.quantity })),
-        total: cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
+        total: finalTotal
     };
     console.log(order);
     clearCart();
